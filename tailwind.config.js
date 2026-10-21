@@ -1,0 +1,101 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  theme: {
+    extend: {
+      colors: {
+        forest: {
+          50: '#f0f5f1',
+          100: '#dbe8df',
+          200: '#b9d2c2',
+          300: '#8bb399',
+          400: '#5d8f6f',
+          500: '#3f7251',
+          600: '#2d5a3d',
+          700: '#234730',
+          800: '#1a3725',
+          900: '#102517',
+          950: '#08140d',
+        },
+        leaf: {
+          50: '#f3faf3',
+          100: '#e2f3e3',
+          200: '#c6e8c8',
+          300: '#9bd39f',
+          400: '#6cb96f',
+          500: '#479e4a',
+          600: '#357f37',
+          700: '#2a652c',
+          800: '#245025',
+          900: '#1f4221',
+          950: '#0d250e',
+        },
+        earth: {
+          50: '#fbf7f0',
+          100: '#f4ebd9',
+          200: '#e8d5b3',
+          300: '#d9ba84',
+          400: '#ca9a5a',
+          500: '#bb8242',
+          600: '#a36837',
+          700: '#854e30',
+          800: '#6d3f2c',
+          900: '#5a3427',
+          950: '#341c15',
+        },
+        sand: {
+          50: '#faf8f3',
+          100: '#f3efe4',
+          200: '#e7dec8',
+          300: '#d6c9a5',
+          400: '#c0ae7d',
+          500: '#b09e65',
+        },
+        success: {
+          50: '#f0fdf4',
+          100: '#dcfce7',
+          500: '#22c55e',
+          600: '#16a34a',
+          700: '#15803d',
+        },
+        warning: {
+          50: '#fffbeb',
+          100: '#fef3c7',
+          500: '#f59e0b',
+          600: '#d97706',
+          700: '#b45309',
+        },
+        error: {
+          50: '#fef2f2',
+          100: '#fee2e2',
+          500: '#ef4444',
+          600: '#dc2626',
+          700: '#b91c1c',
+        },
+        cream: '#f7f5f0',
+      },
+      fontFamily: {
+        sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+        display: ['"Fraunces"', 'Georgia', 'serif'],
+      },
+      maxWidth: {
+        content: '1200px',
+      },
+      keyframes: {
+        'fade-up': {
+          '0%': { opacity: '0', transform: 'translateY(16px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        'fade-in': {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+      },
+      animation: {
+        'fade-up': 'fade-up 0.6s ease-out both',
+        'fade-in': 'fade-in 0.5s ease-out both',
+      },
+    },
+  },
+  plugins: [],
+};
