@@ -15,7 +15,7 @@ export function AboutPage() {
             className="w-full h-full object-cover opacity-20"
             loading="eager"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-forest-950/70 to-forest-900/90" />
+          <div className="absolute inset-0 bg-linear-to-b from-forest-950/70 to-forest-900/90" />
         </div>
         <div className="relative max-w-content mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-leaf-300 font-semibold text-sm uppercase tracking-widest mb-3">
@@ -33,7 +33,7 @@ export function AboutPage() {
       {/* Vision & Mission */}
       <section className="max-w-content mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid gap-8 lg:grid-cols-2">
-          <div className="rounded-2xl bg-white border border-forest-100 shadow-sm p-8">
+          <div className="rounded-2xl bg-white border border-forest-100 shadow-xs p-8">
             <span className="flex items-center justify-center w-12 h-12 rounded-xl bg-leaf-100 text-leaf-700 mb-5">
               <Eye className="w-6 h-6" aria-hidden="true" />
             </span>
@@ -42,7 +42,7 @@ export function AboutPage() {
               {site.vision}
             </p>
           </div>
-          <div className="rounded-2xl bg-white border border-forest-100 shadow-sm p-8">
+          <div className="rounded-2xl bg-white border border-forest-100 shadow-xs p-8">
             <span className="flex items-center justify-center w-12 h-12 rounded-xl bg-earth-100 text-earth-700 mb-5">
               <Target className="w-6 h-6" aria-hidden="true" />
             </span>
@@ -66,7 +66,7 @@ export function AboutPage() {
             {site.values.map((v) => (
               <div
                 key={v.title}
-                className="bg-white rounded-2xl border border-forest-100 shadow-sm p-7"
+                className="bg-white rounded-2xl border border-forest-100 shadow-xs p-7"
               >
                 <span className="flex items-center justify-center w-11 h-11 rounded-xl bg-forest-100 text-forest-700 mb-4">
                   <Compass className="w-5 h-5" aria-hidden="true" />
@@ -92,7 +92,7 @@ export function AboutPage() {
           {site.approach.map((a, i) => (
             <li
               key={a.step}
-              className="relative rounded-2xl border border-forest-100 bg-white p-7 shadow-sm"
+              className="relative rounded-2xl border border-forest-100 bg-white p-7 shadow-xs"
             >
               <span className="flex items-center justify-center w-10 h-10 rounded-full bg-leaf-600 text-white font-semibold">
                 {i + 1}

@@ -105,7 +105,7 @@ export function ContactPage() {
 
           {/* Form */}
           <div className="lg:col-span-3">
-            <div className="bg-white rounded-2xl border border-forest-100 shadow-sm p-7 sm:p-9">
+            <div className="bg-white rounded-2xl border border-forest-100 shadow-xs p-7 sm:p-9">
               <h2 className="text-2xl text-forest-900">Send a message</h2>
               <p className="mt-2 text-sm text-forest-700/80">
                 Fill in the form and we will respond by email. Fields marked *

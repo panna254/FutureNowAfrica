@@ -70,7 +70,7 @@ export function GetInvolvedPage() {
             return (
               <div
                 key={item.title}
-                className="bg-white rounded-2xl border border-forest-100 shadow-sm p-8 flex flex-col"
+                className="bg-white rounded-2xl border border-forest-100 shadow-xs p-8 flex flex-col"
               >
                 <span className="flex items-center justify-center w-12 h-12 rounded-xl bg-leaf-100 text-leaf-700 mb-5">
                   <Icon className="w-6 h-6" aria-hidden="true" />
@@ -129,7 +129,7 @@ export function GetInvolvedPage() {
             description="Tell us how you would like to take part and we will follow up."
           />
           <div className="mt-10 grid gap-6 sm:grid-cols-3">
-            <div className="bg-white rounded-2xl border border-forest-100 shadow-sm p-6 flex items-start gap-3">
+            <div className="bg-white rounded-2xl border border-forest-100 shadow-xs p-6 flex items-start gap-3">
               <Mail className="w-5 h-5 text-leaf-600 mt-0.5 shrink-0" aria-hidden="true" />
               <div>
                 <p className="text-sm font-semibold text-forest-900">Email</p>
@@ -138,7 +138,7 @@ export function GetInvolvedPage() {
                 </p>
               </div>
             </div>
-            <div className="bg-white rounded-2xl border border-forest-100 shadow-sm p-6 flex items-start gap-3">
+            <div className="bg-white rounded-2xl border border-forest-100 shadow-xs p-6 flex items-start gap-3">
               <Phone className="w-5 h-5 text-leaf-600 mt-0.5 shrink-0" aria-hidden="true" />
               <div>
                 <p className="text-sm font-semibold text-forest-900">Phone</p>
@@ -147,7 +147,7 @@ export function GetInvolvedPage() {
                 </p>
               </div>
             </div>
-            <div className="bg-white rounded-2xl border border-forest-100 shadow-sm p-6 flex items-start gap-3">
+            <div className="bg-white rounded-2xl border border-forest-100 shadow-xs p-6 flex items-start gap-3">
               <MapPin className="w-5 h-5 text-leaf-600 mt-0.5 shrink-0" aria-hidden="true" />
               <div>
                 <p className="text-sm font-semibold text-forest-900">Where we work</p>

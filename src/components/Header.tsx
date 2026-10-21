@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Menu, X, Leaf } from 'lucide-react';
-import { routes, Link, useRoute } from '@/router';
+import { Link } from '@/router';
+import { routes, useRoute } from '@/router-state';
 import { site } from '@/data/site';
 
 export function Header() {
@@ -37,7 +38,7 @@ export function Header() {
     <header
       className={`fixed top-0 inset-x-0 z-50 transition-colors duration-300 ${
         scrolled
-          ? 'bg-cream/95 backdrop-blur-sm shadow-sm border-b border-forest-100'
+          ? 'bg-cream/95 backdrop-blur-xs shadow-xs border-b border-forest-100'
           : 'bg-transparent'
       }`}
     >

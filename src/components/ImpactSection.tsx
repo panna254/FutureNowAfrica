@@ -69,9 +69,9 @@ export function ImpactSection() {
           {demoStories.map((s) => (
             <article
               key={s.title}
-              className="flex flex-col bg-white rounded-2xl overflow-hidden border border-forest-100 shadow-sm"
+              className="flex flex-col bg-white rounded-2xl overflow-hidden border border-forest-100 shadow-xs"
             >
-              <div className="relative aspect-[16/10] overflow-hidden">
+              <div className="relative aspect-16/10 overflow-hidden">
                 <img
                   src={s.image}
                   alt={s.imageAlt}

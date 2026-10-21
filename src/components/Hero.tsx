@@ -13,8 +13,8 @@ export function Hero() {
           loading="eager"
         />
         {/* Gradient overlay for readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-forest-950/90 via-forest-900/70 to-forest-900/30" />
-        <div className="absolute inset-0 bg-gradient-to-t from-forest-950/80 via-transparent to-forest-950/30" />
+        <div className="absolute inset-0 bg-linear-to-r from-forest-950/90 via-forest-900/70 to-forest-900/30" />
+        <div className="absolute inset-0 bg-linear-to-t from-forest-950/80 via-transparent to-forest-950/30" />
       </div>
 
       {/* Content */}
@@ -36,7 +36,7 @@ export function Hero() {
             <ButtonLink to="/get-involved" variant="primary">
               Get Involved
             </ButtonLink>
-            <ButtonLink to="/programs" variant="outline" className="!border-cream/40 !text-cream hover:!bg-cream hover:!text-forest-900">
+            <ButtonLink to="/programs" variant="outline" className="border-cream/40! text-cream! hover:bg-cream! hover:text-forest-900!">
               Explore Our Programs
             </ButtonLink>
           </div>

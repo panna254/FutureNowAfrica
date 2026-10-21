@@ -28,7 +28,7 @@ export function CtaBand({
               <ButtonLink
                 to={secondary.to}
                 variant="outline"
-                className="!border-cream/40 !text-cream hover:!bg-cream hover:!text-forest-900"
+                className="border-cream/40! text-cream! hover:bg-cream! hover:text-forest-900!"
               >
                 {secondary.label}
               </ButtonLink>

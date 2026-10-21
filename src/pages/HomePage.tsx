@@ -27,13 +27,13 @@ export function HomePage() {
       <section className="bg-forest-50/60">
         <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="grid gap-8 lg:grid-cols-2">
-            <div className="bg-white rounded-2xl p-8 border border-forest-100 shadow-sm">
+            <div className="bg-white rounded-2xl p-8 border border-forest-100 shadow-xs">
               <h2 className="text-2xl text-forest-900">Our Vision</h2>
               <p className="mt-4 text-forest-700/80 text-lg leading-relaxed">
                 {site.vision}
               </p>
             </div>
-            <div className="bg-white rounded-2xl p-8 border border-forest-100 shadow-sm">
+            <div className="bg-white rounded-2xl p-8 border border-forest-100 shadow-xs">
               <h2 className="text-2xl text-forest-900">Our Mission</h2>
               <p className="mt-4 text-forest-700/80 text-lg leading-relaxed">
                 {site.mission}
