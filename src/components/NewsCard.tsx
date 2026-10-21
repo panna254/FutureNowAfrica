@@ -15,7 +15,7 @@ export function NewsCard({ item }: { item: NewsItem }) {
     year: 'numeric',
   });
   return (
-    <article className="group flex flex-col bg-white rounded-2xl border border-forest-100 shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden">
+    <article className="group flex flex-col bg-white rounded-2xl border border-forest-100 shadow-xs hover:shadow-md transition-shadow duration-300 overflow-hidden">
       <div className="flex flex-col flex-1 p-6">
         <div className="flex items-center gap-3 mb-4">
           <span

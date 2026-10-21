@@ -1,4 +1,3 @@
-import { SectionHeading } from '@/components/SectionHeading';
 import { CtaBand } from '@/components/CtaBand';
 import { ButtonLink } from '@/components/Button';
 import { programmes } from '@/data/programmes';
@@ -37,7 +36,7 @@ export function ProgramsPage() {
                 }`}
               >
                 <div
-                  className={`relative rounded-2xl overflow-hidden shadow-md aspect-[16/10] ${
+                  className={`relative rounded-2xl overflow-hidden shadow-md aspect-16/10 ${
                     reversed ? 'lg:col-start-2' : ''
                   }`}
                 >
@@ -47,7 +46,7 @@ export function ProgramsPage() {
                     loading="lazy"
                     className="w-full h-full object-cover"
                   />
-                  <span className="absolute top-4 left-4 flex items-center justify-center w-12 h-12 rounded-xl bg-cream/95 text-forest-800 shadow-sm">
+                  <span className="absolute top-4 left-4 flex items-center justify-center w-12 h-12 rounded-xl bg-cream/95 text-forest-800 shadow-xs">
                     <Icon className="w-6 h-6" aria-hidden="true" />
                   </span>
                 </div>

@@ -1,6 +1,6 @@
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
-import { useRoute } from '@/router';
+import { useRoute } from '@/router-state';
 import { HomePage } from '@/pages/HomePage';
 import { AboutPage } from '@/pages/AboutPage';
 import { ProgramsPage } from '@/pages/ProgramsPage';
@@ -54,7 +54,7 @@ function App() {
     <div className="min-h-screen flex flex-col bg-cream">
       <a
         href="#main"
-        className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[60] focus:rounded-lg focus:bg-forest-800 focus:text-cream focus:px-4 focus:py-2 focus:text-sm"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-60 focus:rounded-lg focus:bg-forest-800 focus:text-cream focus:px-4 focus:py-2 focus:text-sm"
       >
         Skip to content
       </a>

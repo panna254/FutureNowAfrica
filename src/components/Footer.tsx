@@ -1,5 +1,6 @@
 import { Leaf, Mail, MapPin, Phone } from 'lucide-react';
-import { Link, routes } from '@/router';
+import { Link } from '@/router';
+import { routes } from '@/router-state';
 import { site } from '@/data/site';
 
 export function Footer() {
