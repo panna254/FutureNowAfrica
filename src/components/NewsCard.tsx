@@ -19,24 +19,24 @@ export function NewsCard({ item }: { item: NewsItem }) {
       <div className="flex flex-col flex-1 p-6">
         <div className="flex items-center gap-3 mb-4">
           <span
-            className={`rounded-full text-xs font-semibold px-3 py-1 ${categoryColors[item.category]}`}
+            className={`rounded-full text-caption font-semibold px-3 py-1 ${categoryColors[item.category]}`}
           >
             {item.category}
           </span>
           {item.isDemo && (
-            <span className="rounded-full bg-earth-500/10 text-earth-700 text-xs font-semibold px-3 py-1">
+            <span className="rounded-full bg-earth-500/10 text-earth-700 text-caption font-semibold px-3 py-1">
               Demo
             </span>
           )}
         </div>
-        <h3 className="text-lg text-forest-900 group-hover:text-leaf-700 transition-colors">
+        <h3 className="text-card text-forest-900 group-hover:text-leaf-700 transition-colors">
           {item.title}
         </h3>
-        <p className="mt-2 text-sm text-forest-700/80 leading-relaxed flex-1">
+        <p className="mt-2 text-body text-forest-700/80 flex-1">
           {item.excerpt}
         </p>
-        <div className="mt-5 pt-4 border-t border-forest-100 flex items-center justify-between">
-          <div className="flex items-center gap-3 text-xs text-forest-500">
+        <div className="mt-5 pt-4 border-t border-forest-100 flex flex-wrap items-center justify-between gap-3">
+          <div className="type-meta flex flex-wrap items-center gap-x-2 text-forest-600">
             <time dateTime={item.date}>{dateLabel}</time>
             <span aria-hidden="true">·</span>
             <span>{item.readTime}</span>
@@ -44,7 +44,7 @@ export function NewsCard({ item }: { item: NewsItem }) {
           <Link
             to="/news"
             ariaLabel={`Read ${item.title}`}
-            className="inline-flex items-center gap-1 text-sm font-semibold text-forest-800 hover:text-leaf-700 transition-colors"
+            className="inline-flex items-center gap-1 text-ui text-forest-800 hover:text-leaf-700 transition-colors"
           >
             Read
             <ArrowRight className="w-4 h-4" aria-hidden="true" />

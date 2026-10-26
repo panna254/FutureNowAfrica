@@ -18,13 +18,13 @@ export function AboutPage() {
           <div className="absolute inset-0 bg-linear-to-b from-forest-950/70 to-forest-900/90" />
         </div>
         <div className="relative max-w-content mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-leaf-300 font-semibold text-sm uppercase tracking-widest mb-3">
+          <p className="type-label text-leaf-300 mb-3">
             About Us
           </p>
-          <h1 className="text-4xl sm:text-5xl text-cream max-w-3xl">
+          <h1 className="text-page text-cream max-w-3xl">
             Who we are
           </h1>
-          <p className="mt-5 text-lg text-cream/85 max-w-2xl leading-relaxed">
+          <p className="mt-5 text-lead text-cream/85 max-w-2xl">
             {site.intro}
           </p>
         </div>
@@ -37,8 +37,8 @@ export function AboutPage() {
             <span className="flex items-center justify-center w-12 h-12 rounded-xl bg-leaf-100 text-leaf-700 mb-5">
               <Eye className="w-6 h-6" aria-hidden="true" />
             </span>
-            <h2 className="text-2xl text-forest-900">Vision</h2>
-            <p className="mt-3 text-forest-700/80 text-lg leading-relaxed">
+            <h2 className="text-section text-forest-900">Vision</h2>
+            <p className="mt-3 text-lead text-forest-700/80">
               {site.vision}
             </p>
           </div>
@@ -46,8 +46,8 @@ export function AboutPage() {
             <span className="flex items-center justify-center w-12 h-12 rounded-xl bg-earth-100 text-earth-700 mb-5">
               <Target className="w-6 h-6" aria-hidden="true" />
             </span>
-            <h2 className="text-2xl text-forest-900">Mission</h2>
-            <p className="mt-3 text-forest-700/80 text-lg leading-relaxed">
+            <h2 className="text-section text-forest-900">Mission</h2>
+            <p className="mt-3 text-lead text-forest-700/80">
               {site.mission}
             </p>
           </div>
@@ -71,8 +71,8 @@ export function AboutPage() {
                 <span className="flex items-center justify-center w-11 h-11 rounded-xl bg-forest-100 text-forest-700 mb-4">
                   <Compass className="w-5 h-5" aria-hidden="true" />
                 </span>
-                <h3 className="text-lg text-forest-900">{v.title}</h3>
-                <p className="mt-2 text-sm text-forest-700/80 leading-relaxed">
+                <h3 className="text-card text-forest-900">{v.title}</h3>
+                <p className="mt-2 text-body text-forest-700/80">
                   {v.body}
                 </p>
               </div>
@@ -94,11 +94,11 @@ export function AboutPage() {
               key={a.step}
               className="relative rounded-2xl border border-forest-100 bg-white p-7 shadow-xs"
             >
-              <span className="flex items-center justify-center w-10 h-10 rounded-full bg-leaf-600 text-white font-semibold">
+              <span className="flex items-center justify-center w-10 h-10 rounded-full bg-leaf-600 text-white type-meta">
                 {i + 1}
               </span>
-              <h3 className="mt-4 text-xl text-forest-900">{a.step}</h3>
-              <p className="mt-2 text-sm text-forest-700/80 leading-relaxed">
+              <h3 className="mt-4 text-card text-forest-900">{a.step}</h3>
+              <p className="mt-2 text-body text-forest-700/80">
                 {a.description}
               </p>
             </li>
@@ -112,8 +112,8 @@ export function AboutPage() {
           <span className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-forest-100 text-forest-700 mb-4">
             <Leaf className="w-6 h-6" aria-hidden="true" />
           </span>
-          <h3 className="text-xl text-forest-800">Team &amp; story</h3>
-          <p className="mt-3 text-forest-700/80 max-w-xl mx-auto">
+          <h2 className="text-card text-forest-800">Team &amp; story</h2>
+          <p className="mt-3 text-body text-forest-700/80 max-w-xl mx-auto">
             Our team and founding story will appear here once approved content
             is supplied. We don't publish names, photos or biographies without
             consent.

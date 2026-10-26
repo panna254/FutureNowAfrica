@@ -23,13 +23,13 @@ export function NewsPage() {
       {/* Header */}
       <section className="pt-28 pb-16 bg-forest-900 text-cream">
         <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-leaf-300 font-semibold text-sm uppercase tracking-widest mb-3">
+          <p className="type-label text-leaf-300 mb-3">
             News &amp; Resources
           </p>
-          <h1 className="text-4xl sm:text-5xl text-cream max-w-3xl">
+          <h1 className="text-page text-cream max-w-3xl">
             Learn, read and stay connected
           </h1>
-          <p className="mt-5 text-lg text-cream/85 max-w-2xl leading-relaxed">
+          <p className="mt-5 text-lead text-cream/85 max-w-2xl">
             Environmental education resources, climate primers, project updates
             and community stories — all in one place.
           </p>
@@ -38,7 +38,7 @@ export function NewsPage() {
 
       {/* Demo notice */}
       <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-8 pt-12">
-        <div className="rounded-xl bg-earth-50 border border-earth-200 px-5 py-4 text-sm text-earth-800">
+        <div className="rounded-xl bg-earth-50 border border-earth-200 px-5 py-4 text-body text-earth-800">
           <strong className="font-semibold">Demo content:</strong> All items
           below are placeholders for layout only and are not real articles or
           project updates. They will be replaced with approved content before
@@ -56,7 +56,7 @@ export function NewsPage() {
               role="tab"
               aria-selected={filter === c}
               onClick={() => setFilter(c)}
-              className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
+              className={`rounded-full px-4 py-2 type-action transition-colors ${
                 filter === c
                   ? 'bg-forest-800 text-cream'
                   : 'bg-forest-50 text-forest-700 hover:bg-forest-100'
@@ -74,7 +74,7 @@ export function NewsPage() {
             ))}
           </div>
         ) : (
-          <p className="text-forest-700/70 py-12 text-center">
+          <p className="text-body text-forest-700/80 py-12 text-center">
             No items in this category yet.
           </p>
         )}

@@ -4,6 +4,7 @@ type Props = {
   description?: string;
   align?: 'left' | 'center';
   as?: 'h1' | 'h2';
+  tone?: 'light' | 'dark';
 };
 
 export function SectionHeading({
@@ -12,19 +13,20 @@ export function SectionHeading({
   description,
   align = 'left',
   as: Tag = 'h2',
+  tone = 'light',
 }: Props) {
   return (
     <div
       className={`max-w-2xl ${align === 'center' ? 'mx-auto text-center' : ''}`}
     >
       {eyebrow && (
-        <p className="text-leaf-600 font-semibold text-sm uppercase tracking-widest mb-3">
+        <p className={`type-label mb-3 ${tone === 'dark' ? 'text-leaf-300' : 'text-leaf-700'} ${align === 'center' ? 'mx-auto' : ''}`}>
           {eyebrow}
         </p>
       )}
-      <Tag className="text-3xl sm:text-4xl text-forest-900">{title}</Tag>
+      <Tag className={`${Tag === 'h1' ? 'text-page' : 'text-section'} ${tone === 'dark' ? 'text-cream' : 'text-forest-900'}`}>{title}</Tag>
       {description && (
-        <p className="mt-4 text-forest-700/80 text-lg leading-relaxed">
+        <p className={`mt-4 text-lead ${tone === 'dark' ? 'text-cream/85' : 'text-forest-700/80'} ${align === 'center' ? 'mx-auto' : ''}`}>
           {description}
         </p>
       )}

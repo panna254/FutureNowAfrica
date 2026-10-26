@@ -28,14 +28,14 @@ export function HomePage() {
         <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="grid gap-8 lg:grid-cols-2">
             <div className="bg-white rounded-2xl p-8 border border-forest-100 shadow-xs">
-              <h2 className="text-2xl text-forest-900">Our Vision</h2>
-              <p className="mt-4 text-forest-700/80 text-lg leading-relaxed">
+              <h2 className="text-section text-forest-900">Our Vision</h2>
+              <p className="mt-4 text-lead text-forest-700/80">
                 {site.vision}
               </p>
             </div>
             <div className="bg-white rounded-2xl p-8 border border-forest-100 shadow-xs">
-              <h2 className="text-2xl text-forest-900">Our Mission</h2>
-              <p className="mt-4 text-forest-700/80 text-lg leading-relaxed">
+              <h2 className="text-section text-forest-900">Our Mission</h2>
+              <p className="mt-4 text-lead text-forest-700/80">
                 {site.mission}
               </p>
             </div>
@@ -71,6 +71,7 @@ export function HomePage() {
             title="Identify. Educate. Act. Sustain."
             description="A simple cycle that keeps communities in the lead — and keeps the work going after we step back."
             align="center"
+            tone="dark"
           />
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {site.approach.map((a, i) => {
@@ -83,11 +84,11 @@ export function HomePage() {
                   <span className="flex items-center justify-center w-12 h-12 rounded-xl bg-leaf-600/20 text-leaf-300 mb-5">
                     <Icon className="w-6 h-6" aria-hidden="true" />
                   </span>
-                  <p className="text-xs font-semibold text-leaf-400 uppercase tracking-widest">
+                  <p className="type-meta text-leaf-400">
                     Step {i + 1}
                   </p>
-                  <h3 className="mt-1 text-xl text-cream">{a.step}</h3>
-                  <p className="mt-3 text-sm text-forest-100/80 leading-relaxed">
+                  <h3 className="mt-1 text-card text-cream">{a.step}</h3>
+                  <p className="mt-3 text-body text-forest-100/80">
                     {a.description}
                   </p>
                 </div>

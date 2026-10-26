@@ -6,7 +6,7 @@ const variants: Record<Variant, string> = {
   primary:
     'bg-leaf-600 text-white hover:bg-leaf-700 shadow-xs focus-visible:ring-leaf-500',
   secondary:
-    'bg-earth-500 text-white hover:bg-earth-600 shadow-xs focus-visible:ring-earth-400',
+    'bg-earth-700 text-white hover:bg-earth-800 shadow-xs focus-visible:ring-earth-400',
   outline:
     'border-2 border-forest-700 text-forest-800 hover:bg-forest-700 hover:text-white focus-visible:ring-forest-600',
   ghost:
@@ -14,7 +14,7 @@ const variants: Record<Variant, string> = {
 };
 
 const base =
-  'inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-colors duration-200 disabled:opacity-60 disabled:cursor-not-allowed';
+  'inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 type-action transition-colors duration-200 disabled:opacity-60 disabled:cursor-not-allowed';
 
 export function ButtonLink({
   to,

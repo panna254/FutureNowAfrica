@@ -29,19 +29,19 @@ export function ProgrammeCard({
         </span>
       </div>
       <div className="flex flex-col flex-1 p-6">
-        <p className="text-xs font-semibold uppercase tracking-widest text-leaf-600 mb-2">
+        <p className="type-meta text-leaf-600 mb-2">
           {String(index + 1).padStart(2, '0')}
         </p>
-        <h3 className="text-xl text-forest-900 group-hover:text-leaf-700 transition-colors">
+        <h3 className="text-card text-forest-900 group-hover:text-leaf-700 transition-colors">
           {programme.title}
         </h3>
-        <p className="mt-2 text-sm text-leaf-700 font-medium">
+        <p className="mt-2 text-caption text-leaf-700 font-medium">
           {programme.tagline}
         </p>
-        <p className="mt-3 text-sm text-forest-700/80 leading-relaxed flex-1">
+        <p className="mt-3 text-body text-forest-700/80 flex-1">
           {programme.description}
         </p>
-        <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-forest-800 group-hover:text-leaf-700 transition-colors">
+        <span className="mt-5 inline-flex items-center gap-1.5 text-ui text-forest-800 group-hover:text-leaf-700 transition-colors">
           Learn more
           <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
         </span>

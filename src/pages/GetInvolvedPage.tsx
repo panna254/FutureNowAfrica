@@ -49,13 +49,13 @@ export function GetInvolvedPage() {
       {/* Header */}
       <section className="pt-28 pb-16 bg-forest-900 text-cream">
         <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-leaf-300 font-semibold text-sm uppercase tracking-widest mb-3">
+          <p className="type-label text-leaf-300 mb-3">
             Get Involved
           </p>
-          <h1 className="text-4xl sm:text-5xl text-cream max-w-3xl">
+          <h1 className="text-page text-cream max-w-3xl">
             There is a role for everyone
           </h1>
-          <p className="mt-5 text-lg text-cream/85 max-w-2xl leading-relaxed">
+          <p className="mt-5 text-lead text-cream/85 max-w-2xl">
             Individuals, schools, community groups and organisations can all
             take part. Choose the path that fits you.
           </p>
@@ -75,15 +75,15 @@ export function GetInvolvedPage() {
                 <span className="flex items-center justify-center w-12 h-12 rounded-xl bg-leaf-100 text-leaf-700 mb-5">
                   <Icon className="w-6 h-6" aria-hidden="true" />
                 </span>
-                <h2 className="text-xl text-forest-900">{item.title}</h2>
-                <p className="mt-2 text-forest-700/80 leading-relaxed">
+                <h2 className="text-card text-forest-900">{item.title}</h2>
+                <p className="mt-2 text-body text-forest-700/80">
                   {item.description}
                 </p>
                 <ul className="mt-5 space-y-2">
                   {item.points.map((pt) => (
                     <li
                       key={pt}
-                      className="flex items-center gap-2 text-sm text-forest-700"
+                      className="flex items-center gap-2 text-body text-forest-700"
                     >
                       <span
                         className="w-1.5 h-1.5 rounded-full bg-leaf-500"
@@ -106,10 +106,10 @@ export function GetInvolvedPage() {
             <HeartHandshake className="w-5 h-5" aria-hidden="true" />
           </span>
           <div>
-            <h2 className="text-lg text-forest-900">
+            <h2 className="text-card text-forest-900">
               About financial donations
             </h2>
-            <p className="mt-2 text-sm text-forest-700/80 leading-relaxed max-w-2xl">
+            <p className="mt-2 text-body text-forest-700/80 max-w-2xl">
               We do not currently process financial donations online. An
               approved donation destination and, where relevant, regulatory
               status must be confirmed before any &ldquo;Support Our Work&rdquo;
@@ -132,8 +132,8 @@ export function GetInvolvedPage() {
             <div className="bg-white rounded-2xl border border-forest-100 shadow-xs p-6 flex items-start gap-3">
               <Mail className="w-5 h-5 text-leaf-600 mt-0.5 shrink-0" aria-hidden="true" />
               <div>
-                <p className="text-sm font-semibold text-forest-900">Email</p>
-                <p className="text-sm text-forest-700/80">
+                <p className="text-ui text-forest-900">Email</p>
+                <p className="text-body text-forest-700/80">
                   {site.contact.email || 'To be confirmed'}
                 </p>
               </div>
@@ -141,8 +141,8 @@ export function GetInvolvedPage() {
             <div className="bg-white rounded-2xl border border-forest-100 shadow-xs p-6 flex items-start gap-3">
               <Phone className="w-5 h-5 text-leaf-600 mt-0.5 shrink-0" aria-hidden="true" />
               <div>
-                <p className="text-sm font-semibold text-forest-900">Phone</p>
-                <p className="text-sm text-forest-700/80">
+                <p className="text-ui text-forest-900">Phone</p>
+                <p className="text-body text-forest-700/80">
                   {site.contact.phone || 'To be confirmed'}
                 </p>
               </div>
@@ -150,8 +150,8 @@ export function GetInvolvedPage() {
             <div className="bg-white rounded-2xl border border-forest-100 shadow-xs p-6 flex items-start gap-3">
               <MapPin className="w-5 h-5 text-leaf-600 mt-0.5 shrink-0" aria-hidden="true" />
               <div>
-                <p className="text-sm font-semibold text-forest-900">Where we work</p>
-                <p className="text-sm text-forest-700/80">
+                <p className="text-ui text-forest-900">Where we work</p>
+                <p className="text-body text-forest-700/80">
                   {site.contact.operatingArea}
                 </p>
               </div>

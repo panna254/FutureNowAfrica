@@ -3,7 +3,7 @@ import { site } from '@/data/site';
 
 export function Hero() {
   return (
-    <section className="relative min-h-[92vh] flex items-center overflow-hidden">
+    <section className="relative bg-forest-950 min-h-[92vh] flex items-center overflow-hidden">
       {/* Background image */}
       <div className="absolute inset-0">
         <img
@@ -13,21 +13,21 @@ export function Hero() {
           loading="eager"
         />
         {/* Gradient overlay for readability */}
-        <div className="absolute inset-0 bg-linear-to-r from-forest-950/90 via-forest-900/70 to-forest-900/30" />
+        <div className="absolute inset-0 bg-linear-to-r from-forest-950/90 via-forest-900/85 to-forest-900/80" />
         <div className="absolute inset-0 bg-linear-to-t from-forest-950/80 via-transparent to-forest-950/30" />
       </div>
 
       {/* Content */}
       <div className="relative max-w-content mx-auto px-4 sm:px-6 lg:px-8 w-full pt-24 pb-20">
         <div className="max-w-2xl animate-fade-up">
-          <p className="inline-flex items-center gap-2 text-leaf-300 font-semibold text-sm uppercase tracking-widest mb-5">
+          <p className="inline-flex items-center gap-2 text-leaf-300 type-label mb-5">
             <span className="w-8 h-px bg-leaf-300" aria-hidden="true" />
             {site.tagline}
           </p>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl text-cream leading-[1.1]">
+          <h1 className="text-hero text-cream">
             The future of Africa depends on the actions we take today.
           </h1>
-          <p className="mt-6 text-lg sm:text-xl text-cream/85 leading-relaxed max-w-xl">
+          <p className="mt-6 text-lead text-cream/85 max-w-xl">
             FutureNow Africa is a community-based environmental initiative —
             working alongside schools, youth and neighbourhoods to conserve
             nature, raise climate awareness and build sustainable livelihoods.

@@ -50,10 +50,10 @@ export function ImpactSection() {
     <section className="max-w-content mx-auto px-4 sm:px-6 lg:px-8 py-20">
       {/* Empty state for measurable outcomes */}
       <div className="rounded-2xl border-2 border-dashed border-forest-200 bg-forest-50/50 p-8 sm:p-10 text-center">
-        <h3 className="text-xl text-forest-800">
+        <h3 className="text-card text-forest-800">
           Measurable outcomes — coming soon
         </h3>
-        <p className="mt-3 text-forest-700/80 max-w-xl mx-auto">
+        <p className="mt-3 text-body text-forest-700/80 max-w-xl mx-auto">
           We will share verified impact metrics (trees planted, waste
           collected, gardens established, people reached) here once approved
           data is available. We do not publish unverified numbers.
@@ -62,7 +62,7 @@ export function ImpactSection() {
 
       {/* Demo story cards */}
       <div className="mt-14">
-        <p className="text-sm font-semibold text-earth-600 uppercase tracking-widest mb-6">
+        <p className="type-label text-earth-700 mb-6">
           Stories — demo content (not real)
         </p>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -78,14 +78,14 @@ export function ImpactSection() {
                   loading="lazy"
                   className="w-full h-full object-cover"
                 />
-                <span className="absolute top-3 left-3 rounded-full bg-earth-500/90 text-white text-xs font-semibold px-3 py-1">
+                <span className="absolute top-3 left-3 rounded-full bg-earth-700 text-white text-caption font-semibold px-3 py-1">
                   Demo
                 </span>
               </div>
               <div className="flex flex-col flex-1 p-6">
-                <p className="text-xs text-forest-500 mb-2">{s.location}</p>
-                <h3 className="text-lg text-forest-900">{s.title}</h3>
-                <p className="mt-2 text-sm text-forest-700/80 leading-relaxed flex-1">
+                <p className="text-caption text-forest-600 mb-2">{s.location}</p>
+                <h3 className="text-card text-forest-900">{s.title}</h3>
+                <p className="mt-2 text-body text-forest-700/80 flex-1">
                   {s.summary}
                 </p>
               </div>

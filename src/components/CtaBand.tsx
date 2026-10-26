@@ -18,8 +18,8 @@ export function CtaBand({
         <div className="absolute -top-10 -right-10 w-56 h-56 rounded-full bg-leaf-600/20 blur-3xl" aria-hidden="true" />
         <div className="absolute -bottom-12 -left-8 w-48 h-48 rounded-full bg-earth-500/20 blur-3xl" aria-hidden="true" />
         <div className="relative max-w-2xl">
-          <h2 className="text-3xl sm:text-4xl text-cream">{title}</h2>
-          <p className="mt-4 text-cream/80 text-lg leading-relaxed">{description}</p>
+          <h2 className="text-section text-cream">{title}</h2>
+          <p className="mt-4 text-cream/80 text-lead">{description}</p>
           <div className="mt-8 flex flex-wrap gap-4">
             <ButtonLink to={primary.to} variant="primary">
               {primary.label}

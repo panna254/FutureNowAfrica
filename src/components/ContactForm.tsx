@@ -68,7 +68,7 @@ export function ContactForm() {
   };
 
   const fieldClass = (hasError?: string) =>
-    `w-full rounded-xl border px-4 py-3 text-sm transition-colors bg-white ${
+    `w-full rounded-xl border px-4 py-3 text-body transition-colors bg-white ${
       hasError
         ? 'border-error-500 focus:ring-error-500'
         : 'border-forest-200 focus:border-leaf-500'
@@ -78,7 +78,7 @@ export function ContactForm() {
     <form onSubmit={handleSubmit} noValidate className="space-y-5">
       {/* Name */}
       <div>
-        <label htmlFor="cf-name" className="block text-sm font-medium text-forest-800 mb-1.5">
+        <label htmlFor="cf-name" className="block text-ui font-medium text-forest-800 mb-1.5">
           Name <span className="text-error-600">*</span>
         </label>
         <input
@@ -93,7 +93,7 @@ export function ContactForm() {
           disabled={status === 'submitting'}
         />
         {errors.name && (
-          <p id="cf-name-err" className="mt-1.5 text-sm text-error-600 flex items-center gap-1.5">
+          <p id="cf-name-err" className="mt-1.5 text-caption text-error-600 flex items-center gap-1.5">
             <AlertCircle className="w-4 h-4" aria-hidden="true" />
             {errors.name}
           </p>
@@ -102,7 +102,7 @@ export function ContactForm() {
 
       {/* Email */}
       <div>
-        <label htmlFor="cf-email" className="block text-sm font-medium text-forest-800 mb-1.5">
+        <label htmlFor="cf-email" className="block text-ui font-medium text-forest-800 mb-1.5">
           Email <span className="text-error-600">*</span>
         </label>
         <input
@@ -117,7 +117,7 @@ export function ContactForm() {
           disabled={status === 'submitting'}
         />
         {errors.email && (
-          <p id="cf-email-err" className="mt-1.5 text-sm text-error-600 flex items-center gap-1.5">
+          <p id="cf-email-err" className="mt-1.5 text-caption text-error-600 flex items-center gap-1.5">
             <AlertCircle className="w-4 h-4" aria-hidden="true" />
             {errors.email}
           </p>
@@ -126,7 +126,7 @@ export function ContactForm() {
 
       {/* Subject */}
       <div>
-        <label htmlFor="cf-subject" className="block text-sm font-medium text-forest-800 mb-1.5">
+        <label htmlFor="cf-subject" className="block text-ui font-medium text-forest-800 mb-1.5">
           Subject
         </label>
         <input
@@ -142,7 +142,7 @@ export function ContactForm() {
 
       {/* Message */}
       <div>
-        <label htmlFor="cf-message" className="block text-sm font-medium text-forest-800 mb-1.5">
+        <label htmlFor="cf-message" className="block text-ui font-medium text-forest-800 mb-1.5">
           Message <span className="text-error-600">*</span>
         </label>
         <textarea
@@ -157,7 +157,7 @@ export function ContactForm() {
           disabled={status === 'submitting'}
         />
         {errors.message && (
-          <p id="cf-message-err" className="mt-1.5 text-sm text-error-600 flex items-center gap-1.5">
+          <p id="cf-message-err" className="mt-1.5 text-caption text-error-600 flex items-center gap-1.5">
             <AlertCircle className="w-4 h-4" aria-hidden="true" />
             {errors.message}
           </p>
@@ -168,7 +168,7 @@ export function ContactForm() {
       {status === 'failure' && (
         <div
           role="alert"
-          className="flex items-start gap-3 rounded-xl bg-warning-50 border border-warning-500/40 px-4 py-3.5 text-sm text-warning-700"
+          className="flex items-start gap-3 rounded-xl bg-warning-50 border border-warning-500/40 px-4 py-3.5 text-caption text-warning-700"
         >
           <AlertCircle className="w-5 h-5 shrink-0 mt-0.5" aria-hidden="true" />
           <div>
@@ -185,14 +185,14 @@ export function ContactForm() {
       {status === 'success' && (
         <div
           role="status"
-          className="flex items-start gap-3 rounded-xl bg-success-50 border border-success-500/40 px-4 py-3.5 text-sm text-success-700"
+          className="flex items-start gap-3 rounded-xl bg-success-50 border border-success-500/40 px-4 py-3.5 text-caption text-success-700"
         >
           <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5" aria-hidden="true" />
           <p>Thank you — your message has been sent. We will be in touch soon.</p>
         </div>
       )}
 
-      <div className="flex items-center gap-4">
+      <div className="flex flex-wrap items-center gap-4">
         <Button
           type="submit"
           variant="primary"
@@ -210,7 +210,7 @@ export function ContactForm() {
             </>
           )}
         </Button>
-        <p className="text-xs text-forest-500">
+        <p className="text-caption text-forest-500">
           Required fields are marked with *
         </p>
       </div>
