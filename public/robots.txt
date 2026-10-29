@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://future-now-africa-eapa.vercel.app/sitemap.xml

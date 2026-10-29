@@ -32,8 +32,21 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
   return (
     <a
       ref={ref}
-      href={'#' + to}
-      onClick={handleClick}
+      href={to}
+      onClick={(event) => {
+        if (
+          event.defaultPrevented ||
+          event.button !== 0 ||
+          event.metaKey ||
+          event.ctrlKey ||
+          event.shiftKey ||
+          event.altKey
+        ) {
+          return;
+        }
+
+        handleClick(event);
+      }}
       onKeyDown={onKeyDown}
       className={className}
       aria-label={ariaLabel}

@@ -10,6 +10,7 @@ import { GalleryPage } from '@/pages/GalleryPage';
 import { GetInvolvedPage } from '@/pages/GetInvolvedPage';
 import { NewsPage } from '@/pages/NewsPage';
 import { ContactPage } from '@/pages/ContactPage';
+import { Seo } from '@/components/Seo';
 
 function NotFound() {
   return (
@@ -56,6 +57,7 @@ function App() {
 
   return (
     <div className="min-h-screen flex flex-col bg-cream">
+      <Seo path={path} />
       <a
         href="#main"
         className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-60 focus:rounded-lg focus:bg-forest-800 focus:text-cream focus:px-4 focus:py-2 focus:text-ui"

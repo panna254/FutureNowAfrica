@@ -62,9 +62,15 @@ export const navigationGroups: NavigationGroup[] = [
   },
 ];
 
+function normalizePath(path: string): string {
+  const withoutTrailingSlash = path.replace(/\/+$/, '');
+  return withoutTrailingSlash === '' ? '/' : withoutTrailingSlash;
+}
+
 function getCurrentPath(): string {
-  const hash = window.location.hash.replace(/^#/, '');
-  return hash === '' ? '/' : hash;
+  const hashPath = window.location.hash.replace(/^#/, '');
+  if (hashPath.startsWith('/')) return normalizePath(hashPath);
+  return normalizePath(window.location.pathname);
 }
 
 export function useRoute(): string {
@@ -76,12 +82,17 @@ export function useRoute(): string {
       window.scrollTo({ top: 0, behavior: 'auto' });
     };
     window.addEventListener('hashchange', onChange);
-    return () => window.removeEventListener('hashchange', onChange);
+    window.addEventListener('popstate', onChange);
+    return () => {
+      window.removeEventListener('hashchange', onChange);
+      window.removeEventListener('popstate', onChange);
+    };
   }, []);
 
   return path;
 }
 
 export function navigate(path: string) {
-  window.location.hash = path;
+  window.history.pushState({}, '', path);
+  window.dispatchEvent(new PopStateEvent('popstate'));
 }
