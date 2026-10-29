@@ -20,7 +20,7 @@ match, so the site uses one sans family for both roles.
 ## Included files
 
 - `cantarell-variable.woff2`: Cantarell **0.311**, from Debian/Kali package
-  `fonts-cantarell 0.311-3`. The original variable `wght` axis spans **100–800**,
+  `fonts-cantarell 0.311-3`. The original variable `wght` axis spans **100,800**,
   with default 400. The website uses **400, 500, 600, and 700**; intermediate
   weights are supported by the variable font. Normal style only; no italic face.
   All **1,307 glyphs** and **1,223 Unicode mappings** are retained. Size:
@@ -33,13 +33,13 @@ match, so the site uses one sans family for both roles.
 ## Source files and integrity
 
 Cantarell source:
-`/usr/share/fonts/opentype/cantarell/Cantarell-VF.otf` — 169,912 bytes.
+`/usr/share/fonts/opentype/cantarell/Cantarell-VF.otf`, 169,912 bytes.
 
 - Source SHA-256: `e1c3ec3f2a9cfe7241fbdf7606247416c502255cac9d0ac60061a44eeb250eab`
 - WOFF2 SHA-256: `25c4d8366f09733c2ea19f37769d2efe8e9adc784ecd0bf058d507aa1fbd7791`
 
 Fira Code source:
-`/usr/share/fonts/truetype/firacode/FiraCode-Medium.ttf` — 282,440 bytes.
+`/usr/share/fonts/truetype/firacode/FiraCode-Medium.ttf`, 282,440 bytes.
 
 - Source SHA-256: `eb68fad91cc56c382e627cb0b3b07f492bf6affb521e9a22d41fff9d67a3bfc1`
 - WOFF2 SHA-256: `e9b26ac23610682082e4e0cc25a1b44715dd4f25d2a53950e4eb33aa45fb54aa`

@@ -9,7 +9,7 @@ type StoryCard = {
 };
 
 /**
- * DEMO story cards — these do not represent real FutureNow Africa projects.
+ * DEMO story cards, these do not represent real FutureNow Africa projects.
  * Replace with approved stories and photographs once supplied.
  */
 const demoStories: StoryCard[] = [
@@ -20,7 +20,7 @@ const demoStories: StoryCard[] = [
     image:
       'https://images.pexels.com/photos/34411687/pexels-photo-34411687.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
     imageAlt:
-      'Farmer inspecting plants — placeholder, not an actual project',
+      'Farmer inspecting plants, placeholder, not an actual project',
     location: 'Location to be confirmed',
   },
   {
@@ -30,7 +30,7 @@ const demoStories: StoryCard[] = [
     image:
       'https://images.pexels.com/photos/38117883/pexels-photo-38117883.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
     imageAlt:
-      'Person sorting plastic bottles for recycling — placeholder, not an actual project',
+      'Person sorting plastic bottles for recycling, placeholder, not an actual project',
     location: 'Location to be confirmed',
   },
   {
@@ -40,7 +40,7 @@ const demoStories: StoryCard[] = [
     image:
       'https://images.pexels.com/photos/31748020/pexels-photo-31748020.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
     imageAlt:
-      'Children holding a Climate Action sign — placeholder, not an actual project',
+      'Children holding a Climate Action sign, placeholder, not an actual project',
     location: 'Location to be confirmed',
   },
 ];
@@ -51,7 +51,7 @@ export function ImpactSection() {
       {/* Empty state for measurable outcomes */}
       <div className="rounded-2xl border-2 border-dashed border-forest-200 bg-forest-50/50 p-8 sm:p-10 text-center">
         <h3 className="text-card text-forest-800">
-          Measurable outcomes — coming soon
+          Measurable outcomes, coming soon
         </h3>
         <p className="mt-3 text-body text-forest-700/80 max-w-xl mx-auto">
           We will share verified impact metrics (trees planted, waste
@@ -63,7 +63,7 @@ export function ImpactSection() {
       {/* Demo story cards */}
       <div className="mt-14">
         <p className="type-label text-earth-700 mb-6">
-          Stories — demo content (not real)
+          Stories, demo content (not real)
         </p>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {demoStories.map((s) => (

@@ -31,7 +31,7 @@ export function NewsPage() {
           </h1>
           <p className="mt-5 text-lead text-cream/85 max-w-2xl">
             Environmental education resources, climate primers, project updates
-            and community stories — all in one place.
+            and community stories, all in one place.
           </p>
         </div>
       </section>
@@ -85,7 +85,7 @@ export function NewsPage() {
         <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <SectionHeading
             eyebrow="For communities &amp; schools"
-            title="Resource library — coming soon"
+            title="Resource library, coming soon"
             description="Downloadable environmental education materials, climate primers and activity guides will be available here once approved. Resources will be labelled clearly and never presented as real unless verified."
           />
         </div>

@@ -167,7 +167,7 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    scroll-padding-block-start: 6rem;
+    scroll-padding-block-start: 6.5rem;
   }
 
   body {
@@ -217,6 +217,47 @@
   .type-nav {
     @apply text-ui font-medium;
     white-space: nowrap;
+  }
+
+  /*
+    These colours are intentionally opaque enough to remain readable when
+    backdrop filtering is unavailable. Supporting browsers receive the softer
+    frosted treatment below.
+  */
+  .navbar-glass {
+    background-color: rgba(247, 245, 240, 0.92);
+    border: 1px solid rgba(23, 61, 43, 0.12);
+    box-shadow: 0 8px 24px rgba(8, 20, 13, 0.09);
+  }
+
+  .navbar-glass[data-scrolled='true'] {
+    background-color: rgba(247, 245, 240, 0.92);
+    border-color: rgba(23, 61, 43, 0.2);
+    box-shadow: 0 14px 32px rgba(8, 20, 13, 0.15);
+  }
+
+  .navbar-dropdown {
+    background-color: rgba(247, 245, 240, 0.985);
+    border: 1px solid rgba(23, 61, 43, 0.15);
+    box-shadow: 0 14px 30px rgba(8, 20, 13, 0.17);
+  }
+}
+
+@supports ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+  .navbar-glass {
+    background-color: rgba(247, 245, 240, 0.76);
+    -webkit-backdrop-filter: blur(18px) saturate(145%);
+    backdrop-filter: blur(18px) saturate(145%);
+  }
+
+  .navbar-glass[data-scrolled='true'] {
+    background-color: rgba(247, 245, 240, 0.88);
+  }
+
+  .navbar-dropdown {
+    background-color: rgba(247, 245, 240, 0.88);
+    -webkit-backdrop-filter: blur(16px) saturate(135%);
+    backdrop-filter: blur(16px) saturate(135%);
   }
 }
 

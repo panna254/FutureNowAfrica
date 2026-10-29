@@ -11,7 +11,7 @@ import { ContactPage } from '@/pages/ContactPage';
 
 function NotFound() {
   return (
-    <section className="min-h-[70vh] flex items-center justify-center px-4">
+    <section className="min-h-[70vh] flex items-center justify-center px-4 pt-28">
       <div className="text-center max-w-md">
         <p className="type-meta text-leaf-600 mb-3">
           404

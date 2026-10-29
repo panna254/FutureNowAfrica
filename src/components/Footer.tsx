@@ -1,4 +1,5 @@
-import { Leaf, Mail, MapPin, Phone } from 'lucide-react';
+import { Mail, MapPin, Phone } from 'lucide-react';
+import { BrandLogo } from '@/components/BrandLogo';
 import { Link } from '@/router';
 import { routes } from '@/router-state';
 import { site } from '@/data/site';
@@ -11,13 +12,8 @@ export function Footer() {
         <div className="grid gap-12 lg:grid-cols-4">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <Link to="/" className="flex items-center gap-2.5" ariaLabel="FutureNow Africa home">
-              <span className="flex items-center justify-center w-9 h-9 shrink-0 rounded-xl bg-leaf-600 text-forest-950">
-                <Leaf className="w-5 h-5" aria-hidden="true" />
-              </span>
-              <span className="text-card text-cream">
-                FutureNow Africa
-              </span>
+            <Link to="/" className="inline-block rounded-lg" ariaLabel="FutureNow Africa home">
+              <BrandLogo variant="dark" alt="" className="h-11 w-auto" />
             </Link>
             <p className="mt-4 text-caption text-forest-200/80 max-w-xs">
               {site.tagline} The future of Africa depends on the actions we take
@@ -96,7 +92,7 @@ export function Footer() {
             © {year} FutureNow Africa. All rights reserved.
           </p>
           <p className="text-caption text-forest-300">
-            Placeholder photography via Pexels — replace with licensed assets before launch.
+            Placeholder photography via Pexels, replace with licensed assets before launch.
           </p>
         </div>
       </div>

@@ -3,12 +3,12 @@ import { site } from '@/data/site';
 
 export function Hero() {
   return (
-    <section className="relative bg-forest-950 min-h-[92vh] flex items-center overflow-hidden">
+    <section className="relative bg-forest-950 min-h-svh flex items-center overflow-hidden">
       {/* Background image */}
       <div className="absolute inset-0">
         <img
           src="https://images.pexels.com/photos/25961227/pexels-photo-25961227.jpeg?auto=compress&cs=tinysrgb&w=1920"
-          alt="Children planting seedlings — placeholder, not an actual FutureNow Africa project"
+          alt="Children planting seedlings, placeholder, not an actual FutureNow Africa project"
           className="w-full h-full object-cover"
           loading="eager"
         />
@@ -18,17 +18,16 @@ export function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative max-w-content mx-auto px-4 sm:px-6 lg:px-8 w-full pt-24 pb-20">
+      <div className="relative max-w-content mx-auto px-4 sm:px-6 lg:px-8 w-full pt-28 pb-20 sm:pt-32">
         <div className="max-w-2xl animate-fade-up">
-          <p className="inline-flex items-center gap-2 text-leaf-300 type-label mb-5">
-            <span className="w-8 h-px bg-leaf-300" aria-hidden="true" />
+          <p className="text-leaf-300 type-label mb-5">
             {site.tagline}
           </p>
           <h1 className="text-hero text-cream">
             The future of Africa depends on the actions we take today.
           </h1>
           <p className="mt-6 text-lead text-cream/85 max-w-xl">
-            FutureNow Africa is a community-based environmental initiative —
+            FutureNow Africa is a community-based environmental initiative,
             working alongside schools, youth and neighbourhoods to conserve
             nature, raise climate awareness and build sustainable livelihoods.
           </p>

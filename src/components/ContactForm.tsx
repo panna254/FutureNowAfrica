@@ -174,7 +174,7 @@ export function ContactForm() {
           <div>
             <p className="font-semibold">Delivery is not configured yet.</p>
             <p className="mt-1">
-              This form is a UI demo — no email is being sent. To reach us now,
+              This form is a UI demo, no email is being sent. To reach us now,
               please use the email address shown on this page. A delivery
               service can be connected before launch.
             </p>
@@ -188,7 +188,7 @@ export function ContactForm() {
           className="flex items-start gap-3 rounded-xl bg-success-50 border border-success-500/40 px-4 py-3.5 text-caption text-success-700"
         >
           <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5" aria-hidden="true" />
-          <p>Thank you — your message has been sent. We will be in touch soon.</p>
+          <p>Thank you, your message has been sent. We will be in touch soon.</p>
         </div>
       )}
 

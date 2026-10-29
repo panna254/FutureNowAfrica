@@ -1,22 +1,62 @@
 import { useEffect, useState } from 'react';
 
-export type Route =
-  | { path: '/'; label: 'Home' }
-  | { path: '/about'; label: 'About Us' }
-  | { path: '/programs'; label: 'Our Programs' }
-  | { path: '/impact'; label: 'Our Impact' }
-  | { path: '/get-involved'; label: 'Get Involved' }
-  | { path: '/news'; label: 'News & Resources' }
-  | { path: '/contact'; label: 'Contact Us' };
+export type RoutePath =
+  | '/'
+  | '/about'
+  | '/programs'
+  | '/impact'
+  | '/get-involved'
+  | '/news'
+  | '/contact';
 
+export interface Route {
+  path: RoutePath;
+  label: string;
+}
+
+export interface NavigationGroup {
+  id: 'about' | 'explore' | 'take-action';
+  label: 'About' | 'Explore' | 'Take Action';
+  items: Route[];
+}
+
+export const homeRoute: Route = { path: '/', label: 'Home' };
+
+const aboutRoute: Route = { path: '/about', label: 'About Us' };
+const programsRoute: Route = { path: '/programs', label: 'Our Programs' };
+const impactRoute: Route = { path: '/impact', label: 'Our Impact' };
+const getInvolvedRoute: Route = { path: '/get-involved', label: 'Get Involved' };
+const newsRoute: Route = { path: '/news', label: 'News & Resources' };
+const contactRoute: Route = { path: '/contact', label: 'Contact Us' };
+
+// Keep every destination in one source of truth while allowing the header to
+// present the same routes in meaningful groups on desktop and mobile.
 export const routes: Route[] = [
-  { path: '/', label: 'Home' },
-  { path: '/about', label: 'About Us' },
-  { path: '/programs', label: 'Our Programs' },
-  { path: '/impact', label: 'Our Impact' },
-  { path: '/get-involved', label: 'Get Involved' },
-  { path: '/news', label: 'News & Resources' },
-  { path: '/contact', label: 'Contact Us' },
+  homeRoute,
+  aboutRoute,
+  programsRoute,
+  impactRoute,
+  getInvolvedRoute,
+  newsRoute,
+  contactRoute,
+];
+
+export const navigationGroups: NavigationGroup[] = [
+  {
+    id: 'about',
+    label: 'About',
+    items: [aboutRoute, impactRoute],
+  },
+  {
+    id: 'explore',
+    label: 'Explore',
+    items: [programsRoute, newsRoute],
+  },
+  {
+    id: 'take-action',
+    label: 'Take Action',
+    items: [getInvolvedRoute, contactRoute],
+  },
 ];
 
 function getCurrentPath(): string {

@@ -49,7 +49,7 @@ export function HomePage() {
           <SectionHeading
             eyebrow="What we do"
             title="Our six programmes"
-            description="Every programme is designed to be led by the community it serves — practical, measurable and built to continue."
+            description="Every programme is designed to be led by the community it serves, practical, measurable and built to continue."
           />
           <ButtonLink to="/programs" variant="outline" className="shrink-0">
             View all programmes
@@ -69,7 +69,7 @@ export function HomePage() {
           <SectionHeading
             eyebrow="How we work"
             title="Identify. Educate. Act. Sustain."
-            description="A simple cycle that keeps communities in the lead — and keeps the work going after we step back."
+            description="A simple cycle that keeps communities in the lead, and keeps the work going after we step back."
             align="center"
             tone="dark"
           />
@@ -101,7 +101,7 @@ export function HomePage() {
       {/* CTAs */}
       <CtaBand
         title="Join the work"
-        description="Whether you have time, a school, a community group or an organisation — there is a role for you."
+            description="Whether you have time, a school, a community group or an organisation, there is a role for you."
         primary={{ to: '/get-involved', label: 'Get Involved' }}
         secondary={{ to: '/about', label: 'Learn About Us' }}
       />

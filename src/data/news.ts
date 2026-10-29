@@ -5,7 +5,7 @@ export type NewsItem = {
   date: string;
   category: 'Resource' | 'Update' | 'Story';
   readTime: string;
-  /** DEMO content — not a real published article. Replace before launch. */
+  /** DEMO content, not a real published article. Replace before launch. */
   isDemo: boolean;
 };
 
@@ -19,7 +19,7 @@ export const newsItems: NewsItem[] = [
     id: 'demo-1',
     title: 'Understanding the basics of climate change',
     excerpt:
-      'A plain-language primer for community sessions — what climate change is, why it matters here, and where local action fits in. (Demo content.)',
+      'A plain-language primer for community sessions, what climate change is, why it matters here, and where local action fits in. (Demo content.)',
     date: '2026-09-01',
     category: 'Resource',
     readTime: '6 min read',
@@ -47,7 +47,7 @@ export const newsItems: NewsItem[] = [
   },
   {
     id: 'demo-4',
-    title: 'Project update: recycling point — what a real update could look like',
+    title: 'Project update: recycling point, what a real update could look like',
     excerpt:
       'A demo project update illustrating the layout for sharing milestones once approved data is available. (Demo content.)',
     date: '2026-09-22',

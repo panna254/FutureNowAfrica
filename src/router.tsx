@@ -1,31 +1,45 @@
+import { forwardRef } from 'react';
 import { navigate } from '@/router-state';
 
-export function Link({
-  to,
-  children,
-  className,
-  onClick,
-  ariaLabel,
-}: {
+type LinkProps = {
   to: string;
   children: React.ReactNode;
   className?: string;
   onClick?: () => void;
+  onKeyDown?: React.KeyboardEventHandler<HTMLAnchorElement>;
   ariaLabel?: string;
-}) {
-  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
+  ariaCurrent?: 'page';
+};
+
+export const Link = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
+  {
+    to,
+    children,
+    className,
+    onClick,
+    onKeyDown,
+    ariaLabel,
+    ariaCurrent,
+  },
+  ref,
+) {
+  const handleClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
     navigate(to);
     onClick?.();
   };
+
   return (
     <a
-      href={`#${to}`}
+      ref={ref}
+      href={'#' + to}
       onClick={handleClick}
+      onKeyDown={onKeyDown}
       className={className}
       aria-label={ariaLabel}
+      aria-current={ariaCurrent}
     >
       {children}
     </a>
   );
-}
+});

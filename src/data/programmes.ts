@@ -29,12 +29,12 @@ export const programmes: Programme[] = [
     title: 'Environmental Education',
     tagline: 'Knowledge that grows into action',
     description:
-      'Workshops, school clubs and community sessions that build environmental literacy — helping children, youth and families understand local ecosystems and the choices that protect them.',
+      'Workshops, school clubs and community sessions that build environmental literacy, helping children, youth and families understand local ecosystems and the choices that protect them.',
     icon: BookOpen,
     image:
       'https://images.pexels.com/photos/12448839/pexels-photo-12448839.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
     imageAlt:
-      'Children in a classroom engaged in learning — placeholder, not an actual FutureNow Africa project',
+      'Children in a classroom engaged in learning, placeholder, not an actual FutureNow Africa project',
   },
   {
     slug: 'waste-collection-recycling',
@@ -46,7 +46,7 @@ export const programmes: Programme[] = [
     image:
       'https://images.pexels.com/photos/38117883/pexels-photo-38117883.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
     imageAlt:
-      'Person sorting plastic bottles for recycling — placeholder, not an actual FutureNow Africa project',
+      'Person sorting plastic bottles for recycling, placeholder, not an actual FutureNow Africa project',
   },
   {
     slug: 'urban-farming-sustainable-agriculture',
@@ -58,42 +58,42 @@ export const programmes: Programme[] = [
     image:
       'https://images.pexels.com/photos/34411687/pexels-photo-34411687.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
     imageAlt:
-      'Farmer inspecting plants in a field — placeholder, not an actual FutureNow Africa project',
+      'Farmer inspecting plants in a field, placeholder, not an actual FutureNow Africa project',
   },
   {
     slug: 'rainwater-harvesting-water-conservation',
     title: 'Rainwater Harvesting and Water Conservation',
     tagline: 'Every drop, made to count',
     description:
-      'Low-cost harvesting systems and water-wise practices that help households and schools capture, store and use rainwater — easing pressure on local supply.',
+      'Low-cost harvesting systems and water-wise practices that help households and schools capture, store and use rainwater, easing pressure on local supply.',
     icon: Droplets,
     image:
       'https://images.pexels.com/photos/17991182/pexels-photo-17991182.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
     imageAlt:
-      'Close-up of dew droplets on a green leaf — placeholder, not an actual FutureNow Africa project',
+      'Close-up of dew droplets on a green leaf, placeholder, not an actual FutureNow Africa project',
   },
   {
     slug: 'tree-planting-ecosystem-restoration',
     title: 'Tree Planting and Ecosystem Restoration',
     tagline: 'Roots for the next generation',
     description:
-      'Community planting days and restoration of degraded green spaces that rebuild shade, soil and habitat — one tree, one school, one neighbourhood at a time.',
+      'Community planting days and restoration of degraded green spaces that rebuild shade, soil and habitat, one tree, one school, one neighbourhood at a time.',
     icon: TreePine,
     image:
       'https://images.pexels.com/photos/11130997/pexels-photo-11130997.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
     imageAlt:
-      'Two young people planting a tree outdoors — placeholder, not an actual FutureNow Africa project',
+      'Two young people planting a tree outdoors, placeholder, not an actual FutureNow Africa project',
   },
   {
     slug: 'climate-awareness-action',
     title: 'Climate Awareness and Action',
     tagline: 'Local voices, climate decisions',
     description:
-      'Campaigns, youth dialogues and public events that connect everyday community action to the wider climate story — making climate change understandable and addressable.',
+      'Campaigns, youth dialogues and public events that connect everyday community action to the wider climate story, making climate change understandable and addressable.',
     icon: Globe2,
     image:
       'https://images.pexels.com/photos/31748020/pexels-photo-31748020.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
     imageAlt:
-      'Children holding a Climate Action sign — placeholder, not an actual FutureNow Africa project',
+      'Children holding a Climate Action sign, placeholder, not an actual FutureNow Africa project',
   },
 ];

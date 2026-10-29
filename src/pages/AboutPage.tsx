@@ -11,7 +11,7 @@ export function AboutPage() {
         <div className="absolute inset-0">
           <img
             src="https://images.pexels.com/photos/8613887/pexels-photo-8613887.jpeg?auto=compress&cs=tinysrgb&w=1920"
-            alt="Children sitting in a tree — placeholder, not an actual FutureNow Africa project"
+            alt="Children sitting in a tree, placeholder, not an actual FutureNow Africa project"
             className="w-full h-full object-cover opacity-20"
             loading="eager"
           />

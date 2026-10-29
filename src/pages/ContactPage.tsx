@@ -15,7 +15,7 @@ export function ContactPage() {
             Let&rsquo;s talk
           </h1>
           <p className="mt-5 text-lead text-cream/85 max-w-2xl">
-            Questions, partnerships, volunteering or press — reach out and we
+            Questions, partnerships, volunteering or press, reach out and we
             will get back to you.
           </p>
         </div>

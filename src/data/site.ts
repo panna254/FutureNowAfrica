@@ -1,5 +1,5 @@
 /**
- * Site-wide configuration. Values marked TODO are client decisions still needed —
+ * Site-wide configuration. Values marked TODO are client decisions still needed,
  * they are left as clearly labelled placeholders rather than invented content.
  */
 export const site = {
@@ -7,7 +7,7 @@ export const site = {
   tagline: 'Learn. Act. Sustain.',
   coreMessage: 'The future of Africa depends on the actions we take today.',
   intro:
-    'FutureNow Africa is a community-based environmental initiative. We work alongside schools, youth groups and neighbourhoods to protect nature, respond to climate change and build sustainable livelihoods — one community at a time.',
+    'FutureNow Africa is a community-based environmental initiative. We work alongside schools, youth groups and neighbourhoods to protect nature, respond to climate change and build sustainable livelihoods, one community at a time.',
   vision:
     'A continent where every community has the knowledge, tools and confidence to protect its environment and shape a sustainable future.',
   mission:
@@ -19,7 +19,7 @@ export const site = {
     },
     {
       title: 'Evidence over assumption',
-      body: 'We measure what we do and share honest results — even when they are modest.',
+      body: 'We measure what we do and share honest results, even when they are modest.',
     },
     {
       title: 'Inclusion',
@@ -44,7 +44,7 @@ export const site = {
     {
       step: 'Act',
       description:
-        'Run hands-on projects — planting, recycling, farming, harvesting — that turn knowledge into visible change.',
+        'Run hands-on projects, planting, recycling, farming, harvesting, that turn knowledge into visible change.',
     },
     {
       step: 'Sustain',
@@ -54,9 +54,9 @@ export const site = {
   ],
   // TODO: Client to confirm official contact details before launch.
   contact: {
-    email: 'hello@futurenowafrica.org', // placeholder — replace with approved address
+    email: 'hello@futurenowafrica.org', // placeholder, replace with approved address
     phone: '', // TODO: provide approved contact number
-    operatingArea: 'Communities across Africa — specific regions to be confirmed.',
+    operatingArea: 'Communities across Africa, specific regions to be confirmed.',
     // TODO: confirm official social handles
     social: [
       { label: 'Facebook', href: '' },

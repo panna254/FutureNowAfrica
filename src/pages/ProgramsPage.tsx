@@ -75,7 +75,7 @@ export function ProgramsPage() {
 
       <CtaBand
         title="Ready to take part?"
-        description="Find the role that fits you — volunteer, school, community group or partner."
+        description="Find the role that fits you, volunteer, school, community group or partner."
         primary={{ to: '/get-involved', label: 'Get Involved' }}
         secondary={{ to: '/contact', label: 'Ask a Question' }}
       />

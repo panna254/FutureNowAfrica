@@ -14,7 +14,7 @@ export function ProgrammeCard({
     <Link
       to="/programs"
       className="group flex flex-col bg-white rounded-2xl overflow-hidden border border-forest-100 shadow-xs hover:shadow-lg hover:border-leaf-200 transition-all duration-300 hover:-translate-y-1"
-      ariaLabel={`${programme.title} — view programme details`}
+      ariaLabel={`${programme.title}, view programme details`}
     >
       <div className="relative aspect-16/10 overflow-hidden">
         <img

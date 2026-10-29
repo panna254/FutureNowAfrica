@@ -17,7 +17,7 @@ const involvement = [
     icon: Users,
     title: 'Volunteer',
     description:
-      'Join planting days, recycling drives, workshops and community events. No experience needed — just willingness.',
+      'Join planting days, recycling drives, workshops and community events. No experience needed, just willingness.',
     points: ['Tree planting & restoration', 'Recycling & clean-up drives', 'Event support'],
   },
   {
@@ -38,7 +38,7 @@ const involvement = [
     icon: Gift,
     title: 'Donations & sponsorships',
     description:
-      'In-kind support — tools, seedlings, space, transport — helps programmes reach more communities.',
+      'In-kind support, tools, seedlings, space, transport, helps programmes reach more communities.',
     points: ['Tools & materials', 'Seedlings & trees', 'Space & logistics'],
   },
 ];
