@@ -1,51 +1,150 @@
-import { ButtonLink } from '@/components/Button';
-import { site } from '@/data/site';
+import { useEffect, useRef, useState } from 'react';
+import { ChevronLeft, ChevronRight, Pause, Play } from 'lucide-react';
+import { HeroSlide } from '@/components/HeroSlide';
+import { heroSlides } from '@/data/heroSlides';
+
+const SLIDE_INTERVAL_MS = 7000;
+const REDUCED_MOTION_QUERY = '(prefers-reduced-motion: reduce)';
+const slideCount = heroSlides.length;
+
+function usePrefersReducedMotion() {
+  const [reduced, setReduced] = useState(() => window.matchMedia(REDUCED_MOTION_QUERY).matches);
+
+  useEffect(() => {
+    const query = window.matchMedia(REDUCED_MOTION_QUERY);
+    const onChange = () => setReduced(query.matches);
+    query.addEventListener('change', onChange);
+    return () => query.removeEventListener('change', onChange);
+  }, []);
+
+  return reduced;
+}
+
+const controlClass =
+  'inline-flex min-h-11 min-w-11 items-center justify-center rounded-full border border-cream/40 bg-forest-950/50 text-cream backdrop-blur-sm transition-colors hover:bg-cream hover:text-forest-950 active:scale-[.97]';
 
 export function Hero() {
+  const [index, setIndex] = useState(0);
+  const [userPaused, setUserPaused] = useState(false);
+  const [hovered, setHovered] = useState(false);
+  const [focusWithin, setFocusWithin] = useState(false);
+  const [inView, setInView] = useState(true);
+  const [pageVisible, setPageVisible] = useState(() => document.visibilityState === 'visible');
+  const reducedMotion = usePrefersReducedMotion();
+  const sectionRef = useRef<HTMLElement>(null);
+
+  const autoplayPaused = userPaused || hovered || focusWithin || !inView || !pageVisible || reducedMotion;
+
+  useEffect(() => {
+    if (autoplayPaused) return;
+    const timer = window.setTimeout(() => setIndex((i) => (i + 1) % slideCount), SLIDE_INTERVAL_MS);
+    return () => window.clearTimeout(timer);
+  }, [index, autoplayPaused]);
+
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section) return;
+    const observer = new IntersectionObserver(([entry]) => setInView(entry.isIntersecting), {
+      threshold: 0.25,
+    });
+    observer.observe(section);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    const onVisibilityChange = () => setPageVisible(document.visibilityState === 'visible');
+    document.addEventListener('visibilitychange', onVisibilityChange);
+    return () => document.removeEventListener('visibilitychange', onVisibilityChange);
+  }, []);
+
+  const goTo = (next: number) => setIndex((next + slideCount) % slideCount);
+
+  const handleBlur = (event: React.FocusEvent<HTMLElement>) => {
+    if (!event.currentTarget.contains(event.relatedTarget as Node | null)) {
+      setFocusWithin(false);
+    }
+  };
+
   return (
-    <section className="relative bg-forest-950 min-h-svh flex items-center overflow-hidden">
-      {/* Background image */}
-      <div className="absolute inset-0">
-        <img
-          src="https://images.pexels.com/photos/25961227/pexels-photo-25961227.jpeg?auto=compress&cs=tinysrgb&w=1920"
-          alt="Children planting seedlings, placeholder, not an actual FutureNow Africa project"
-          className="w-full h-full object-cover"
-          loading="eager"
+    <section
+      ref={sectionRef}
+      aria-roledescription="carousel"
+      aria-label="Our programmes"
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      onFocus={() => setFocusWithin(true)}
+      onBlur={handleBlur}
+      className="relative isolate min-h-[640px] h-[88svh] overflow-hidden bg-forest-950 text-cream lg:min-h-[620px] lg:h-[84svh] lg:max-h-[860px]"
+    >
+      <h1 className="sr-only">FutureNow Africa: Learn. Act. Sustain.</h1>
+
+      {heroSlides.map((slide, i) => (
+        <HeroSlide
+          key={slide.id}
+          slide={slide}
+          index={i}
+          total={slideCount}
+          active={i === index}
+          priority={i === 0}
         />
-        {/* Gradient overlay for readability */}
-        <div className="absolute inset-0 bg-linear-to-r from-forest-950/90 via-forest-900/85 to-forest-900/80" />
-        <div className="absolute inset-0 bg-linear-to-t from-forest-950/80 via-transparent to-forest-950/30" />
-      </div>
+      ))}
 
-      {/* Content */}
-      <div className="relative max-w-content mx-auto px-4 sm:px-6 lg:px-8 w-full pt-28 pb-20 sm:pt-32">
-        <div className="max-w-2xl animate-fade-up">
-          <p className="text-leaf-300 type-label mb-5">
-            {site.tagline}
-          </p>
-          <h1 className="text-hero text-cream">
-            The future of Africa depends on the actions we take today.
-          </h1>
-          <p className="mt-6 text-lead text-cream/85 max-w-xl">
-            FutureNow Africa is a community-based environmental initiative,
-            working alongside schools, youth and neighbourhoods to conserve
-            nature, raise climate awareness and build sustainable livelihoods.
-          </p>
-          <div className="mt-9 flex flex-wrap gap-4">
-            <ButtonLink to="/get-involved" variant="primary">
-              Get Involved
-            </ButtonLink>
-            <ButtonLink to="/programs" variant="outline" className="border-cream/40! text-cream! hover:bg-cream! hover:text-forest-900!">
-              Explore Our Programs
-            </ButtonLink>
+      <div className="absolute inset-x-0 bottom-0 z-20 pb-6 sm:pb-8">
+        <div className="mx-auto flex max-w-content flex-col gap-4 px-4 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
+          <div className="flex items-center gap-1" role="group" aria-label="Choose a slide">
+            {heroSlides.map((slide, i) => {
+              const active = i === index;
+              return (
+                <button
+                  key={slide.id}
+                  type="button"
+                  onClick={() => goTo(i)}
+                  aria-label={`Show slide ${i + 1}: ${slide.eyebrow}`}
+                  aria-current={active ? 'true' : undefined}
+                  className="inline-flex min-h-11 min-w-8 items-center justify-center px-1"
+                >
+                  <span
+                    aria-hidden="true"
+                    className={`h-1.5 rounded-full transition-all duration-500 ${
+                      active ? 'w-10 bg-cream' : 'w-4 bg-cream/45 hover:bg-cream/75'
+                    }`}
+                  />
+                </button>
+              );
+            })}
           </div>
-        </div>
-      </div>
 
-      {/* Scroll hint */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 hidden sm:block" aria-hidden="true">
-        <div className="w-6 h-10 rounded-full border-2 border-cream/40 flex items-start justify-center p-1.5">
-          <span className="w-1 h-2 bg-cream/60 rounded-full animate-bounce" />
+          <div className="flex items-center gap-2 self-end sm:self-auto">
+            <span className="type-meta mr-2 text-cream/80" aria-hidden="true">
+              {String(index + 1).padStart(2, '0')} / {String(slideCount).padStart(2, '0')}
+            </span>
+            {!reducedMotion && (
+              <button
+                type="button"
+                onClick={() => setUserPaused((paused) => !paused)}
+                aria-label={userPaused ? 'Play slideshow' : 'Pause slideshow'}
+                className={controlClass}
+              >
+                {userPaused ? <Play className="h-4 w-4" aria-hidden="true" /> : <Pause className="h-4 w-4" aria-hidden="true" />}
+              </button>
+            )}
+            <button
+              type="button"
+              onClick={() => goTo(index - 1)}
+              aria-label="Previous slide"
+              className={controlClass}
+            >
+              <ChevronLeft className="h-5 w-5" aria-hidden="true" />
+            </button>
+            <button
+              type="button"
+              onClick={() => goTo(index + 1)}
+              aria-label="Next slide"
+              className={controlClass}
+            >
+              <ChevronRight className="h-5 w-5" aria-hidden="true" />
+            </button>
+          </div>
         </div>
       </div>
     </section>
