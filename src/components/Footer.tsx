@@ -3,6 +3,7 @@ import { BrandLogo } from '@/components/BrandLogo';
 import { Link } from '@/router';
 import { routes } from '@/router-state';
 import { site } from '@/data/site';
+import { requestCookieSettings } from '@/lib/cookieConsent';
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -87,13 +88,22 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-14 pt-8 border-t border-forest-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-forest-800 pt-8 sm:flex-row">
           <p className="text-caption text-forest-300">
             © {year} FutureNow Africa. All rights reserved.
           </p>
-          <p className="text-caption text-forest-300">
-            Placeholder photography via Pexels, replace with licensed assets before launch.
-          </p>
+          <div className="flex flex-wrap items-center justify-center gap-4 sm:justify-end">
+            <p className="text-caption text-forest-300">
+              Placeholder photography by IncluDev replace with licensed assets before launch.
+            </p>
+            <button
+              type="button"
+              onClick={requestCookieSettings}
+              className="min-h-11 rounded-lg px-2 text-caption text-forest-200 underline decoration-forest-400 underline-offset-4 transition-colors hover:text-cream focus-visible:text-cream"
+            >
+              Cookie Settings
+            </button>
+          </div>
         </div>
       </div>
     </footer>

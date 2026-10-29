@@ -198,6 +198,19 @@ export function Header() {
                 onNavigate={() => setOpenDropdown(null)}
               />
             ))}
+            <Link
+              to="/gallery"
+              onClick={closeAllNavigation}
+              ariaCurrent={isActive('/gallery') ? 'page' : undefined}
+              className={[
+                'type-nav rounded-full px-3.5 py-2 transition-colors duration-200',
+                isActive('/gallery')
+                  ? 'bg-forest-800 text-cream shadow-sm'
+                  : 'text-forest-800 hover:bg-forest-100/90 hover:text-forest-950',
+              ].join(' ')}
+            >
+              Gallery
+            </Link>
           </nav>
 
           <div className="col-start-2 flex min-w-0 items-center justify-end gap-1.5 lg:col-start-3 lg:gap-2">
@@ -336,6 +349,19 @@ export function Header() {
                   </div>
                 );
               })}
+              <Link
+                to="/gallery"
+                onClick={closeMobileNavigation}
+                ariaCurrent={isActive('/gallery') ? 'page' : undefined}
+                className={[
+                  'block rounded-xl px-4 py-3 text-card transition-colors',
+                  isActive('/gallery')
+                    ? 'bg-forest-800 text-cream'
+                    : 'text-forest-800 hover:bg-forest-100',
+                ].join(' ')}
+              >
+                Gallery
+              </Link>
             </nav>
           </div>
         )}

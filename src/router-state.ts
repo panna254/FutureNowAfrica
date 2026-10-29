@@ -5,6 +5,7 @@ export type RoutePath =
   | '/about'
   | '/programs'
   | '/impact'
+  | '/gallery'
   | '/get-involved'
   | '/news'
   | '/contact';
@@ -25,6 +26,7 @@ export const homeRoute: Route = { path: '/', label: 'Home' };
 const aboutRoute: Route = { path: '/about', label: 'About Us' };
 const programsRoute: Route = { path: '/programs', label: 'Our Programs' };
 const impactRoute: Route = { path: '/impact', label: 'Our Impact' };
+const galleryRoute: Route = { path: '/gallery', label: 'Gallery' };
 const getInvolvedRoute: Route = { path: '/get-involved', label: 'Get Involved' };
 const newsRoute: Route = { path: '/news', label: 'News & Resources' };
 const contactRoute: Route = { path: '/contact', label: 'Contact Us' };
@@ -36,6 +38,7 @@ export const routes: Route[] = [
   aboutRoute,
   programsRoute,
   impactRoute,
+  galleryRoute,
   getInvolvedRoute,
   newsRoute,
   contactRoute,

@@ -19,6 +19,7 @@ const pageDescriptions: Record<RoutePath, string> = {
   '/about': 'Our mission, vision, values and community-led approach.',
   '/programs': 'Environmental education, recycling, farming, water and restoration programmes.',
   '/impact': 'How we measure progress and learn from community-led environmental action.',
+  '/gallery': 'Project photographs, environmental activities and community initiatives.',
   '/get-involved': 'Volunteer, participate, partner or learn how to support FutureNow Africa.',
   '/news': 'Environmental education resources, climate primers and project updates.',
   '/contact': 'Contact FutureNow Africa about programmes, partnerships and participation.',

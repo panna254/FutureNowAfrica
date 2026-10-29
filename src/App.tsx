@@ -1,10 +1,12 @@
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
+import { CookieConsentBanner } from '@/components/CookieConsentBanner';
 import { useRoute } from '@/router-state';
 import { HomePage } from '@/pages/HomePage';
 import { AboutPage } from '@/pages/AboutPage';
 import { ProgramsPage } from '@/pages/ProgramsPage';
 import { ImpactPage } from '@/pages/ImpactPage';
+import { GalleryPage } from '@/pages/GalleryPage';
 import { GetInvolvedPage } from '@/pages/GetInvolvedPage';
 import { NewsPage } from '@/pages/NewsPage';
 import { ContactPage } from '@/pages/ContactPage';
@@ -39,6 +41,8 @@ function App() {
         return <ProgramsPage />;
       case '/impact':
         return <ImpactPage />;
+      case '/gallery':
+        return <GalleryPage />;
       case '/get-involved':
         return <GetInvolvedPage />;
       case '/news':
@@ -63,6 +67,7 @@ function App() {
         {renderPage()}
       </main>
       <Footer />
+      <CookieConsentBanner />
     </div>
   );
 }
